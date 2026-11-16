@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мини-анкета</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <!-- Экран с формой анкеты -->
+    <section id="survey-view">
+      <h1>Мини-анкета</h1>
+      <p class="subtitle">Ответьте на несколько вопросов — это займёт минуту.</p>
+
+      <div id="loading" class="notice">Загружаем вопросы…</div>
+
+      <form id="survey-form" hidden>
+        <!-- Вопросы подставляются сюда скриптом из GET /questions -->
+        <div id="questions"></div>
+
+        <div id="error" class="error" hidden></div>
+
+        <button type="submit" id="submit-btn">Отправить ответы</button>
+      </form>
+    </section>
+
+    <!-- Экран «Спасибо!» после отправки -->
+    <section id="thanks-view" hidden>
+      <div class="thanks-icon" aria-hidden="true">✓</div>
+      <h1>Спасибо!</h1>
+      <p>Ваши ответы сохранены.</p>
+      <button type="button" id="again-btn">Пройти ещё раз</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
